@@ -10,8 +10,8 @@
 <body>
   <header class="nav">
     <a class="brand" href="#accueil">ADRIEN <span>CARON</span></a>
-    <button class="menu-btn" aria-label="Ouvrir le menu">☰</button>
-    <nav>
+    <button class="menu-btn" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav">☰</button>
+    <nav id="main-nav">
       <a href="#accueil">Accueil</a>
       <a href="#parcours">Parcours</a>
       <a href="#competences">Compétences</a>
@@ -21,20 +21,20 @@
       <a class="nav-cv" href="Adrien_Caron_CV.pdf" download>Télécharger mon CV ↓</a>
     </nav>
   </header>
-
+ 
   <main>
     <section id="accueil" class="hero">
       <div class="hero-content">
         <p class="eyebrow">TECHNICIEN SYSTÈMES & RÉSEAUX</p>
         <h1>Un profil IT<br><span>polyvalent & orienté amélioration.</span></h1>
         <p class="lead">5 ans d’expérience en support, exploitation et supervision 24/7 dans des environnements exigeants.</p>
-
+ 
         <div class="hero-points">
           <div><b>Réactif</b><small>Gestion d’incidents avec efficacité</small></div>
           <div><b>Polyvalent</b><small>Du support N1 à l’exploitation 24/7</small></div>
           <div><b>Force de proposition</b><small>Améliorations concrètes et automatisation</small></div>
         </div>
-
+ 
         <div class="actions">
           <a class="btn primary" href="#profil">Découvrir mon profil →</a>
           <a class="btn ghost" href="Adrien_Caron_CV.pdf" download>Télécharger mon CV ↓</a>
@@ -46,7 +46,7 @@
         <div class="visual-card">SUPPORT · SYSTÈMES · RÉSEAUX · EXPLOITATION</div>
       </div>
     </section>
-
+ 
     <section class="recruiter">
       <p class="eyebrow center">VOUS ÊTES RECRUTEUR ?</p>
       <h2>Que recherchez-vous en priorité ?</h2>
@@ -61,7 +61,7 @@
         <b>Conseil :</b> si vous cherchez un profil capable de passer du support à l’exploitation, commencez par « Profil polyvalent ».
       </div>
     </section>
-
+ 
     <section id="profil" class="section profile">
       <div>
         <p class="eyebrow">EN QUELQUES MOTS</p>
@@ -75,7 +75,7 @@
         <div><strong>N1 → N2</strong><span>support utilisateurs</span></div>
       </div>
     </section>
-
+ 
     <section id="parcours" class="section">
       <div class="section-heading">
         <div><p class="eyebrow">MON PARCOURS</p><h2>Des environnements variés, une même exigence.</h2></div>
@@ -120,7 +120,7 @@
         </article>
       </div>
     </section>
-
+ 
     <section id="projet" class="dark-section">
       <div class="project-copy">
         <p class="eyebrow">UNE INITIATIVE QUI FAIT LA DIFFÉRENCE</p>
@@ -140,7 +140,7 @@
         <div class="dash-row"><span>Alertes traitées</span><b>97%</b></div>
       </div>
     </section>
-
+ 
     <section id="competences" class="section">
       <div class="section-heading"><div><p class="eyebrow">MES COMPÉTENCES CLÉS</p><h2>Ce que je peux apporter à une équipe IT.</h2></div></div>
       <div class="skills-grid">
@@ -150,13 +150,19 @@
         <article class="skill"><span>&lt;/&gt;</span><h3>Données & automatisation</h3><p>SQL · Google Script · Looker Studio · Python (notions)</p></article>
       </div>
     </section>
-
+ 
     <section id="contact" class="contact-section">
       <div>
         <p class="eyebrow">ET MAINTENANT ?</p>
         <h2>Envie d’échanger ?</h2>
         <p>Je souhaite rejoindre une équipe dans laquelle je pourrai mettre à profit mon expérience en support, systèmes & réseaux et exploitation, tout en continuant à développer mon approche orientée amélioration continue.</p>
-        <a class="btn primary" href="mailto:caron_adrien@hotmail.com">Me contacter →</a>
+        <div class="contact-btn-wrap">
+          <button class="btn primary" id="contact-toggle" aria-expanded="false" aria-controls="contact-popover">Me contacter →</button>
+          <div class="contact-popover" id="contact-popover" role="dialog" aria-label="Coordonnées">
+            <a href="mailto:caron_adrien@hotmail.com">✉ caron_adrien@hotmail.com</a>
+            <a href="tel:+33640945931">📞 06 40 94 59 31</a>
+          </div>
+        </div>
       </div>
       <div class="contact-cards">
         <div><b>Localisation</b><span>Lille, France</span></div>
@@ -166,12 +172,12 @@
       </div>
     </section>
   </main>
-
+ 
   <footer>
     <span>© 2026 Adrien Caron</span>
     <div><a href="https://www.linkedin.com/in/adrien-caron-6635241aa/" target="_blank" rel="noopener">LinkedIn ↗</a><a href="mailto:caron_adrien@hotmail.com">Email</a><a href="Adrien_Caron_CV.pdf" download>CV PDF ↓</a></div>
   </footer>
-
+ 
   <script src="script.js"></script>
 </body>
 </html>
